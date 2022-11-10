@@ -1,0 +1,27 @@
+@mixin flex($horizontal-axis, $vertical-axis, $direction) {
+  display: flex;
+  justify-content: $horizontal-axis;
+  align-items: $vertical-axis;
+  flex-direction: $direction;
+}
+@mixin link($color) {
+  color: $color;
+  text-decoration: none;
+  display: inline-block;
+}
+
+@mixin list() {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+@mixin button($background-color, $color) {
+  cursor: pointer;
+  border: none;
+  color: $color;
+  background-color: $background-color;
+  border-radius: 6px;
+  width: 90px;
+  height: 40px;
+  @include flex(center, center, row);
+}
