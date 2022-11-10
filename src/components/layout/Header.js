@@ -6,7 +6,7 @@ import cart from '../../assets/images/cart-shopping-solid.svg';
 import bars from '../../assets/images/bars-solid.svg';
 import { Context } from '../store/context';
 const Header = () => {
-    const [menuVisibility, setMenuVisibility] = useState(true);
+    const [menuVisibility, setMenuVisibility] = useState(false);
     const ctx = useContext(Context);
     const showingMenuHandler = () => {
         setMenuVisibility((prevState) => !prevState)
