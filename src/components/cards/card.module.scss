@@ -1,0 +1,104 @@
+@import "../../globalStyle";
+
+.products {
+  @include flex(space-between, center, row);
+  flex-wrap: wrap;
+  margin-top: 160px;
+}
+.message-container {
+  height: 140px;
+  width: 100%;
+  @include flex(center, center, row);
+}
+.empty-cart-message {
+  background-color: #f7f77ac5;
+  color: #adad0e;
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+.products-in-basket {
+  @include flex(flex-start, center, row);
+  flex-wrap: wrap;
+  margin-top: 160px;
+}
+.selected-card {
+  margin-right: 4%;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.card {
+  width: 22%;
+  box-shadow: 0px 0px 8px -2px #00000081;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 60px;
+  .image {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+  }
+  .body {
+    padding: 10px 15px;
+    h3 {
+      height: 120px;
+    }
+  }
+  .price {
+    text-align: right;
+  }
+  .info {
+    @include flex(space-between, center, row);
+  }
+  .buttons {
+    margin-top: 15px;
+    @include flex(space-between, center, row);
+    button.add-to-card {
+      @include button(green, white);
+    }
+    button.remove {
+      @include button(rgb(207, 20, 20), white);
+    }
+    a.details {
+      text-decoration: none;
+      @include button(#fcc6b4, white);
+    }
+  }
+}
+
+.details-container {
+  margin-top: 150px;
+  @include flex(space-between, flex-start, row);
+  img {
+    width: 330px;
+    height: 500px;
+    object-fit: cover;
+  }
+  div.image {
+    width: 40%;
+  }
+  .content {
+    width: 55%;
+  }
+  button {
+    margin-top: 20px;
+    @include button(green, white);
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .card {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 700px) {
+  .card {
+    width: 45%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .card {
+    width: 90%;
+  }
+}
